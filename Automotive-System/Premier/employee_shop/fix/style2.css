@@ -1,0 +1,29 @@
+body{
+    padding: 0;
+
+}
+
+.container {
+    /* width: 80%; */
+    padding: 5%;
+    /* margin-top: 10%; */
+
+
+}
+
+#OTP{
+
+    width: 350px;
+}
+
+#email{
+
+    width: 350px;
+
+}
+
+#pwd{
+
+    width: 350px;
+
+}   

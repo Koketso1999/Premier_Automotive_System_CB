@@ -1,0 +1,29 @@
+<?php
+//including the database connection file
+require_once ('dbh.php');
+
+//getting id of the data from url
+$id = $_GET['id'];
+//echo $id;
+$reason = $_POST['reason'];
+
+$start = $_POST['start'];
+
+
+//echo "$reason";
+$end = $_POST['end'];
+
+//update number of remaining days from database
+//date difference
+$dateDiff = $start - $end;
+
+
+
+$sqlApply = "INSERT INTO `employeeleave`(`id`,`token`, `start`, `end`, `reason`, `status`) VALUES ('$id','','$start','$end','$reason','Pending')";
+
+$resultApply = mysqli_query($conn, $sqlApply);
+
+//redirecting to the display page (index.php in our case)
+header("Location:..//employee/menu.php");
+?>
+
