@@ -12,7 +12,13 @@
 </style>
 </head>
 <body>
-	<div class ="table-form-Leave">
+	<div class ="table-form-Leave" style=" margin-top: -950px; margin-right:300px; ">
+	<br>
+				<center>
+                <h2 class="card-title text-info">Employee Leave Information</h2>
+                </center>
+
+				<br>
 		<table class="table">
 			<tr>
 				<th align = "center">Emp. ID</th>

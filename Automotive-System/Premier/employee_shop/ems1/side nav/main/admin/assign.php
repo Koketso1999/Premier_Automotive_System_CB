@@ -33,7 +33,10 @@ $dropList = mysqli_query($connection,"SELECT * From `oggetti` WHERE 'status' = 5
             <div class="card card-1">
                 <div class="card-heading"></div>
                 <div class="card-body">
-                    <h2 class="title">Assign Project</h2>
+                <center>
+                <h2 class="card-title text-info">Assign Project</h2>
+                </center>
+
                     <form action="..//process/assignp.php" method="POST" enctype="multipart/form-data">
 
 
@@ -42,17 +45,6 @@ $dropList = mysqli_query($connection,"SELECT * From `oggetti` WHERE 'status' = 5
                          <div class="input-group">
                             <input class="input--style-1" type="text" placeholder="Employee ID" name="eid" required="required">
 
-                            <select name="" id="">
-                                <?php 
-                                while($data = mysqli_fetch_array($dropList))
-                            {
-                            //    echo ("  
-                            //    <option value='opt'>$data['firstName'] </option>                    
-                            //    ");
-                            }	 ?>
-                                
-                               
-                            </select>
                         </div>
 
 
@@ -77,9 +69,9 @@ $dropList = mysqli_query($connection,"SELECT * From `oggetti` WHERE 'status' = 5
                         
 
 
-
+                        
                         <div class="p-t-20">
-                            <button class="btn btn--radius btn--green" type="submit">Assign</button>
+                            <button class="btn btn-secondary btn-lg"type="submit">Assign</button>
                         </div>
                     </form>
                 </div>

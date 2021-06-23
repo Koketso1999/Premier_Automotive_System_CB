@@ -33,7 +33,7 @@ session_start();
             var secondsSinceLastActivity = 0;
 
             //Five minutes. 60 x 5 = 300 seconds.
-            var maxInactivity = (60 * 10);
+            var maxInactivity = (60 * 1);
 
             //Setup the setInterval method to run
             //every second. 1000 milliseconds = 1 second.
@@ -192,6 +192,11 @@ if($resultCheck){
      
   }
   }
+?>
+
+<?php
+    $sqlChechPro = "SELECT * from project where eid = $id order by subdate desc";
+    $resultCheckPro = mysqli_query($conn,$sqlChechPro);
 ?>
 
 

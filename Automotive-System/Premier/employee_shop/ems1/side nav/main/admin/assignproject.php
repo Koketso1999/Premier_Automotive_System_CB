@@ -12,9 +12,13 @@
 </style>
 </head>
 <body>
-	<div class ="container-fluid">
+	<div class ="container-fluids" style=" margin-top: -950px; width:100%; ">
 
-<br><br><br><br><br>
+
+<center>
+                <h2 class="card-title text-info">View Projects</h2>
+                </center>
+<br><br>
 <table class="table">
 			<tr>
 

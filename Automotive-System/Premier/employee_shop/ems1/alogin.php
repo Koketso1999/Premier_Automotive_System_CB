@@ -26,7 +26,7 @@
             <div class="global-page-container">
 
                 <div class="logo small-6 small-offset-3 large-3 large-offset-0 columns no-padding">
-                    <a href="index.html" title="home">
+                <a href="../index.php" title="home">
                         <div class="table">
                             <div class="table-cell">
                                 <h1> <span class="square">&nbsp;</span>Premier Automotive & General Engineering</h1>
@@ -124,11 +124,15 @@
                         </div>
                         <br>
 
-                        <a class="text-info" href="forgot.php" target="popup" onclick="window.open('forgot.php','popup','width=600,height=600,scrollbars=no,resizable=no'); return false;">
+                        <a class="text-info"  target="popup" onclick="window.open('forgotTest.php','popup','width=600,height=600,scrollbars=no,resizable=no'); return false;">
                             Forgot Password?
                         </a>
 
+                        </br>
 
+                        <a class="text-warning" href="elogin.php" target="_blank">
+                            Not an Admin?
+                        </a>
 
                     </form>
                 </div>

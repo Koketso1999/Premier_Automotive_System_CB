@@ -20,15 +20,11 @@
 .table-form-Employee {
   /* apply center bootstrap for responsiveness here */
   width: 10%;
-  margin-top: -600px;
-  margin-left: 95px;
+  margin-left: 130px;
 }
 
 .table-form-Leave {
-  /* apply center bootstrap for responsiveness here */
-  margin-top: 50px;
-  margin-left: 50px;
-  width: 70%;
+ 
   /* margin: auto;  */
   margin-bottom: 1rem;
   font-family: 'Montserrat', sans-serif;

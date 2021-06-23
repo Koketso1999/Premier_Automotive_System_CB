@@ -1,34 +1,30 @@
 <?php
-$con = mysqli_connect("localhost","root","","ems") or die("Unable to connect ");
+$con = mysqli_connect("localhost", "root", "", "ems") or die("Unable to connect ");
 
-if(isset($_POST['SAVE'])){
-    $password=$_POST['password'];
-    $confirmPassword= $_POST['password2'];
+if (isset($_POST['SAVE'])) {
+    $password = $_POST['password'];
+    $confirmPassword = $_POST['password2'];
 
-    
 
-   if($password==$confirmPassword){
 
-    $query2= "UPDATE alogin SET password= '$password' WHERE id = 1" ;
-    $result= mysqli_query($con,$query2);
-    echo '<script>alert("PASSWORD CHANGED SUCCESSFULLY")</script>';
+    if ($password == $confirmPassword) {
 
-    ?>
+        $query2 = "UPDATE alogin SET password= '$password' WHERE id = 1";
+        $result = mysqli_query($con, $query2);
+        echo '<script>alert("PASSWORD CHANGED SUCCESSFULLY")</script>';
 
-    <script type="text/javascript">
-    window.location="index.php";
-    </script>
+?>
+
+        <script type="text/javascript">
+            window.location = "index.php";
+        </script>
 <?php
-  
-   }else{
 
-    echo '<script>alert("THE PASSWORDS DO NOT MATCH")</script>';
-   
-   }
+    } else {
 
-
+        echo '<script>alert("THE PASSWORDS DO NOT MATCH")</script>';
+    }
 }
-
 
 ?>
 
@@ -48,7 +44,6 @@ if(isset($_POST['SAVE'])){
 
 <body>
 
-
     <div class="container">
 
         <h2>
@@ -58,7 +53,7 @@ if(isset($_POST['SAVE'])){
         <!-- <div id="emailHelp" class="form-text">Enter your email to receive the OTP</div> -->
 
         <br>
-        
+
         <form action="" method="POST">
 
             <div class="form-group">
@@ -66,21 +61,16 @@ if(isset($_POST['SAVE'])){
                 <label for="pwd">New Password </label>
                 <input type="password" id="pwd" placeholder="New Password" name="password" class="form-control">
             </div>
-<br>
+            <br>
 
-             <div class="form-group">
+            <div class="form-group">
 
-             <label for="pwd">Confirm New Password </label>
+                <label for="pwd">Confirm New Password </label>
                 <input type="password" id="pwd" placeholder="Confirm New Password" name="password2" class="form-control">
             </div>
             <br>
 
-
-
-
             <button class="btn btn-primary" type="submit" name="SAVE">Submit</button>
-
-
 
         </form>
     </div>

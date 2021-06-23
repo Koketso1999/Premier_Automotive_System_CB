@@ -57,32 +57,19 @@ if(isset($_POST['update']))
 <head>
   <title>Update Profile | Employee Management System</title>
   <!-- Icons font CSS-->
-    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="../vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="../vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
     <!-- Font special for pages-->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
     <!-- Vendor CSS-->
-    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
-    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+    <link href="../vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="../vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
 
     <!-- Main CSS-->
-    <link href="css/main.css" rel="stylesheet" media="all">
+    <link href="../css/main.css" rel="stylesheet" media="all">
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Employee Management System</h1>
-      <ul id="navli">
-        <li><a class="homeblack" href="eloginwel.php?id=<?php echo $id?>"">HOME</a></li>
-        <li><a class="homered" href="myprofile.php?id=<?php echo $id?>"">My Profile</a></li>
-        <li><a class="homeblack" href="applyleave.php?id=<?php echo $id?>"">Apply Leave</a></li>
-        <li><a class="homeblack" href="elogin.html">Log Out</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <div class="divider"></div>
   
 
     <!-- <form id = "registration" action="edit.php" method="POST"> -->
@@ -123,7 +110,7 @@ if(isset($_POST['update']))
                         
                     </form>
                     <br>
-                    <button class="btn btn--radius btn--green" onclick="window.location.href = 'changepassemp.php?id=<?php echo $id?>';">Change Password</button>
+                    <button class="btn btn--radius btn--green" onclick="window.location.href = 'menu.php';"> <-- Go Back</button>
                 </div>
             </div>
         </div>

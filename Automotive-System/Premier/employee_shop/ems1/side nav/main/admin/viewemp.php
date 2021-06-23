@@ -1,4 +1,12 @@
+<?php
+//view employee
+require_once ('..//process/dbh.php');
+$sqlV = "SELECT * from `employee` , `rank` WHERE employee.id = rank.eid";
 
+//echo "$sql";
+$resultV = mysqli_query($conn, $sqlV);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +19,13 @@
 </style>
 </head>
 <body>
-	<div class="table-form-Employee">
-		<table class="table">
+
+	<div class="table-form-Employee" style="margin-top:-900px;">
+				<center>
+                <h2 class="title text-info">Information</h2>
+                </center>
+		<table class="table" style="width: 100%;">
+		
 			<tr bgcolor="#000">
 
 				<th align = "center">Emp. ID</th>

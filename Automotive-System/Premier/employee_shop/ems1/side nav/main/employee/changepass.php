@@ -12,11 +12,11 @@ if(isset($_POST['update']))
   $old = $_POST['oldpass'];
   $new = $_POST['newpass'];
   
-  $result = mysqli_query($conn, "select employee.password from employee WHERE id = $id");
+  $resultChange = mysqli_query($conn, "select employee.password from employee WHERE id = $id");
      $employee = mysqli_fetch_assoc($resultChange);
           if($old == $employee['password']){
-            $sql = "UPDATE `employee` SET `password`='$new' WHERE id = $id";
-            mysqli_query($conn, $sql);
+            $sqlChange = "UPDATE `employee` SET `password`='$new' WHERE id = $id";
+            mysqli_query($conn, $sqlChange);
              echo ("<SCRIPT LANGUAGE='JavaScript'>
                   window.alert('Password Updated')
                 window.location.href='menu.php';</SCRIPT>"); 
@@ -39,14 +39,14 @@ if(isset($_POST['update']))
 
 <?php
 
-  $id = (isset($_GET['id']) ? $_GET['id'] : '');
-  $sql = "SELECT * from `employee` WHERE id=$id";
-  $result = mysqli_query($conn, $sql);
-  if($result){
-  while($res = mysqli_fetch_assoc($result)){
-  $old = $res['password'];
-  echo "$old";
-}
-}
+//   $id = (isset($_GET['id']) ? $_GET['id'] : '');
+//   $sql = "SELECT * from `employee` WHERE id=$id";
+//   $result = mysqli_query($conn, $sql);
+//   if($result){
+//   while($res = mysqli_fetch_assoc($result)){
+//   $old = $res['password'];
+//   echo "$old";
+// }
+// }
 
 ?>

@@ -57,7 +57,7 @@
                                             <div class="system-btn-wrapper1">
 
                                                 <button type="button" class="main-header-buttons"> <a
-                                                        href="Automotive-System/fix/">
+                                                        href="/fix/">
                                                         Engineering
                                                         Shop</a></button>
                                                 <button type="button" class="main-header-buttons"> <a
@@ -65,10 +65,7 @@
                                                         Shop</a> </button>
                                             </div>
 
-                                            <!-- for consideration -->
-                                            <!-- <label for="click" class="fas fa-check"></label> -->
-
-                                            <!-- <p class="login-paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, maiores!</p> -->
+                                           
                                             <div class="line1"></div>
                                             <div class="disclaimer-text">
                                                 <h2 class="disclaimer-text-header">Members Only</h2>
@@ -132,8 +129,13 @@
                                         <!-- Buttons to the system -->
                                         <div class="system-btn-wrapper">
 
-                                            <button type="button">Engineering Shop</button>
-                                            <button type="button">Staffing Shop</button>
+                                        <button type="button" class="main-header-buttons"> <a
+                                                        href="/fix/">
+                                                        Engineering
+                                                        Shop</a></button>
+                                                        <button type="button" class="main-header-buttons"> <a
+                                                        href="ems1/elogin.php">Staffing
+                                                        Shop</a> </button>
                                         </div>
 
                                         <!-- for consideration -->

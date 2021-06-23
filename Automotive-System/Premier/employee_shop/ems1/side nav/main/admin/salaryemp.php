@@ -16,8 +16,8 @@
 	<div id="divimg">
 		
 	</div>
-	
-	<table class="table">
+		
+	<table class="table" style="margin-right:15%; margin-left:15%; margin-bottom:15%; width: 70%; margin-top:-900px;">
 			<tr>
 				<th align = "center">Emp. ID</th>
 				<th align = "center">Name</th>

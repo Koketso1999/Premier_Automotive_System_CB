@@ -84,7 +84,9 @@ if(isset($_POST['update']))
             <div class="card card-1">
                 <div class="card-heading"></div>
                 <div class="card-body">
-                    <h2 class="title">Project Mark</h2>
+                  <center>
+                <h2 class="title text-info">Mark Project</h2>
+                </center>
                     <form id = "registration" action="mark.php" method="POST">
 
 

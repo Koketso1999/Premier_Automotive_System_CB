@@ -1,15 +1,13 @@
 <?php
 require __DIR__ . '/vendor2/autoload.php';
-
 use Twilio\Rest\Client;
-
 $con = mysqli_connect("localhost", "root", "", "ems") or die("Unable to connect ");
-$id = "";
 
 if (isset($_POST['SUBMIT'])) {
   $email = $_POST['email'];
   $query = "";
   $number = "";
+  $id="";
 
   $query = "SELECT email FROM alogin WHERE email = '$email'";
   $result = mysqli_query($con, $query);
@@ -73,7 +71,7 @@ if (isset($_POST['CHECK'])) {
 ?>
 
     <script type="text/javascript">
-      window.location = "otp.php";
+      window.location = "otpA.php";
     </script>
 <?php
 

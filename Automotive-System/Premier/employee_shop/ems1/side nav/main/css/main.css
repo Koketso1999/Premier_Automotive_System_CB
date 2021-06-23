@@ -19,11 +19,10 @@ header h1{
 }
 
 .contentDisplay{
-  margin-top: -300px;
   margin-left: 200px;
 }
 
-nav ul {
+/* nav ul {
   display: inline;
   padding: 6px;
   float: right;
@@ -58,7 +57,7 @@ nav ul ul{
 
 #navli{
   font-family: 'Montserrat', sans-serif;
-}
+} */
 
 .homered{
   background-color: rgb(42, 39, 197);

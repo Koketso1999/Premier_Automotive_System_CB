@@ -125,4 +125,24 @@ $resultSal = mysqli_query($conn, $sqlSal);
 
 ?>
 
+<?php
+
+
+	  $result1 = mysqli_query($conn,"SELECT count(*) as total FROM project where status = 'Submitted'");
+	  $SUBMITTED = mysqli_fetch_assoc($result1);
+
+	  $result2 = mysqli_query($conn,"SELECT count(*) as total FROM project where status = 'Due'");
+	  $DUE = mysqli_fetch_assoc($result2);
+
+	  $resultLeave1 = mysqli_query($conn,"SELECT count(*) as total FROM employeeleave where status = 'Approved'");
+	  $APPROVED = mysqli_fetch_assoc($resultLeave1);
+
+	  $resultLeave2 = mysqli_query($conn,"SELECT count(*) as total FROM employeeleave where status = 'Pending'");
+	  $PENDING = mysqli_fetch_assoc($resultLeave2);
+
+
+
+
+?>
+
 

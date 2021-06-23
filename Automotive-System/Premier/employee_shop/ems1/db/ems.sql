@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 16, 2021 at 08:41 PM
--- Server version: 10.1.28-MariaDB
--- PHP Version: 7.1.10
+-- Generation Time: Jun 23, 2021 at 04:11 AM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 7.3.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -72,8 +71,9 @@ CREATE TABLE `employee` (
 
 INSERT INTO `employee` (`id`, `firstName`, `lastName`, `email`, `password`, `birthday`, `gender`, `contact`, `nid`, `address`, `dept`, `degree`, `pic`, `otp`) VALUES
 (2, 'John', 'Smith', 'john@gmail.com', 'john', '2020-09-01', 'Male', '0999999999', 1, 'New York', 'IT', 'Waterboy', 'images/default.jpg', NULL),
-(6, 'test', 'test', 'test@gmail.com', '1234', '2020-09-06', 'Male', '09998383737', 4, 'test', 'test', 'test', 'images/d.jpg', NULL),
-(7, 'Koketso', 'Morapedi', 'kk@gmail.com', '1234', '2025-12-12', 'Male', '+26777683784', 1234, 'Box 430 Masunga', 'Trucks', 'Driver', 'images/taxi.png', '5464');
+(6, 'test', 'test', 'test@gmail.com', 'test', '2020-09-06', 'Male', '76349072', 4, 'test', 'test', 'test', 'images/d.jpg', NULL),
+(7, 'Koketso', 'Morapedi', 'kk@gmail.com', '1234', '2025-12-12', 'Male', '+26777683784', 1234, 'Box 430 Masunga', 'Trucks', 'Driver', 'images/taxi.png', '5464'),
+(8, 'Thabo', 'Seronga', 'thabo@gmail.com', '1234', '2000-02-09', 'Male', '78092367', 12, 'Broadhurst Block 7', 'Servicing', 'Mechanics', 'images/no.jpg', NULL);
 
 -- --------------------------------------------------------
 
@@ -143,7 +143,9 @@ CREATE TABLE `project` (
 
 INSERT INTO `project` (`pid`, `eid`, `pname`, `duedate`, `subdate`, `mark`, `status`) VALUES
 (1, 2, 'Junkyard', '2020-09-26', '2020-09-04', 1, 'Submitted'),
-(2, 6, 'Tire Fix', '2021-06-13', '0000-00-00', 29, 'Due');
+(2, 6, 'Tire Fix', '2021-06-13', '0000-00-00', 29, 'Due'),
+(3, 6, 'Car Service', '2021-06-30', '0000-00-00', 10, 'Due'),
+(4, 6, 'Replace Truck Spring', '2021-06-24', '0000-00-00', 0, 'Due');
 
 -- --------------------------------------------------------
 
@@ -153,7 +155,7 @@ INSERT INTO `project` (`pid`, `eid`, `pname`, `duedate`, `subdate`, `mark`, `sta
 
 CREATE TABLE `rank` (
   `eid` int(11) NOT NULL,
-  `points` int(11) DEFAULT '0'
+  `points` int(11) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -162,8 +164,9 @@ CREATE TABLE `rank` (
 
 INSERT INTO `rank` (`eid`, `points`) VALUES
 (2, 0),
-(6, 29),
-(7, 0);
+(6, 49),
+(7, 0),
+(8, 0);
 
 -- --------------------------------------------------------
 
@@ -184,8 +187,9 @@ CREATE TABLE `salary` (
 
 INSERT INTO `salary` (`id`, `base`, `bonus`, `total`) VALUES
 (2, 500, 0, 500),
-(6, 1000, 29, 1290),
-(7, 2540, 0, 2540);
+(6, 1000, 49, 1490),
+(7, 2540, 0, 2540),
+(8, 12000, 0, 12000);
 
 --
 -- Indexes for dumped tables
@@ -244,7 +248,7 @@ ALTER TABLE `alogin`
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `employeeleave`
@@ -256,7 +260,7 @@ ALTER TABLE `employeeleave`
 -- AUTO_INCREMENT for table `project`
 --
 ALTER TABLE `project`
-  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables

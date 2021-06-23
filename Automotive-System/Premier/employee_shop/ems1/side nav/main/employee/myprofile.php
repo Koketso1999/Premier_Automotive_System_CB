@@ -5,7 +5,7 @@
             <div class="card card-1">
                 <div class="card-heading"></div>
                 <div class="card-body">
-                    <h2 class="title">My Info</h2>
+                    <h2 class="title text-info">My Information</h2>
                     <form method="POST" action="myprofileup.php?id=<?php echo $id?>" >
 
                         <div class="input-group">
@@ -28,8 +28,8 @@
                         </div>
 
                         <div class="input-group">
-                          <p>Email</p>
-                            <input class="input--style-1" type="email"  name="email" value="<?php echo $email;?>" readonly>
+                          <p style="margin-right: 12px;">Email</p> <br>
+                            <input  type="email"  name="email" value="<?php echo $email;?>" readonly>
                         </div>
                         <div class="row row-space">
                             <div class="col-2">
@@ -48,7 +48,7 @@
                         </div>
                         
                         <div class="input-group">
-                          <p>Contact Number</p>
+                          <p style="margin-right: 12px;">Contact Number</p>
                             <input class="input--style-1" type="number" name="contact" value="<?php echo $contact;?>" readonly>
                         </div>
 
@@ -59,23 +59,23 @@
 
                         
                          <div class="input-group">
-                          <p>Address</p>
+                          <p style="margin-right: 12px;">Address</p>
                             <input class="input--style-1" type="text"  name="address" value="<?php echo $address;?>" readonly>
                         </div>
 
                         <div class="input-group">
-                          <p>Department</p>
+                          <p style="margin-right: 12px;">Department</p>
                             <input class="input--style-1" type="text" name="dept" value="<?php echo $dept;?>" readonly>
                         </div>
 
                         <div class="input-group">
-                          <p>Degree</p>
+                          <p style="margin-right: 12px;">Degree</p>
                             <input class="input--style-1" type="text" name="degree" value="<?php echo $degree;?>" readonly>
                         </div>
 
 
                         <div class="input-group">
-                          <p>Total Salary</p>
+                          <p style="margin-right: 12px;">Total Salary</p>
                             <input class="input--style-1" type="text" name="degree" value="<?php echo $empSProfile;?>" readonly>
                         </div>
 

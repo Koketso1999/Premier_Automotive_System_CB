@@ -26,7 +26,7 @@
             <div class="global-page-container">
 
                 <div class="logo small-6 small-offset-3 large-3 large-offset-0 columns no-padding">
-                    <a href="index.html" title="home">
+                <a href="../index.php" title="home">
                         <div class="table">
                             <div class="table-cell">
                                 <h1> <span class="square">&nbsp;</span>Premier Automotive & General Engineering</h1>
@@ -127,7 +127,11 @@
                             Forgot Password?
                         </a>
 
+                        </br>
 
+                        <a class="text-warning" href="alogin.php" target="_blank">
+                            Are you an Admin?
+                        </a>
 
                     </form>
                 </div>

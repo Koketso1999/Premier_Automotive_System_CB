@@ -11,11 +11,10 @@
 				<th align = "center">Sub Date</th>
 				<th align = "center">Mark</th>
 				<th align = "center">Status</th>
-				<th align = "center">Option</th>
 			</tr>
 
 			<?php
-				while ($employee = mysqli_fetch_assoc($result)) {
+				while ($employee = mysqli_fetch_assoc($resultCheckPro)) {
 
 					echo "<tr>";
 					echo "<th class='rows'>".$employee['pid']."</th>";
@@ -24,9 +23,6 @@
 					echo "<th class='rows'>".$employee['subdate']."</th>";
 					echo "<th class='rows'>".$employee['mark']."</th>";
 					echo "<th class='rows'>".$employee['status']."</th>";
-					
-					 echo "<th class='rows'> <a href=\"psubmit.php?pid=$employee[pid]&id=$employee[eid]\">Submit</a>";
-
 				}
 
 			?>

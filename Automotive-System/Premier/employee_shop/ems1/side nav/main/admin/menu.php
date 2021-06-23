@@ -48,6 +48,7 @@
                         unset($_SESSION['userId']);
                         $timeDiff = time() - $_SESSION["login_time"];
                         echo "<script>alert ('Logged Out successful');</script>";
+                        echo "<script>location.href='../../../elogin.php'</script>"; 
                     }
                     ?>
 
@@ -57,7 +58,7 @@
 
                 </li>
                 <!-- This menu is hidden in bigger devices with d-sm-none. 
-   The sidebar isn't proper for smaller screens imo, so this dropdown menu can keep all the useful sidebar itens exclusively for smaller screens  -->
+                The sidebar isn't proper for smaller screens imo, so this dropdown menu can keep all the useful sidebar itens exclusively for smaller screens  -->
                 <li class="nav-item dropdown d-sm-block d-md-none">
                     <a class="nav-link dropdown-toggle" href="#" id="smallerscreenmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Menu </a>
                     <div class="dropdown-menu" aria-labelledby="smallerscreenmenu">
@@ -91,27 +92,7 @@
                 </li>
                 <!-- /END Separator -->
                 <!-- Menu with submenu -->
-                <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <i class="fa fa-users fa-fw mr-3" aria-hidden="true"></i>
-                        <span class="menu-collapsed">Staff List</span>
-                        <span class="submenu-icon ml-auto"></span>
-                    </div>
-                </a>
-                <!-- Submenu content -->
-                <div id='submenu1' class="collapse sidebar-submenu">
-
-                    <?php
-
-                    while ($data = mysqli_fetch_array($records)) {
-                        echo ("                      
-                               <a href= '#' class= 'list-group-item list-group-item-action bg-dark text-white'>
-                               <span class= 'menu-collapsed' > " . $data['firstName'] . " " . $data['lastName'] . "  </span>
-                               </a>");
-                    }
-                    ?>
-
-                </div>
+               
 
                 <a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                     <div class="d-flex w-100 justify-content-start align-items-center">
@@ -120,6 +101,7 @@
                         <span class="submenu-icon ml-auto"></span>
                     </div>
                 </a>
+               
                 <!-- Submenu content -->
                 <div id='submenu2' class="collapse sidebar-submenu">
                     <a href="#" class="list-group-item list-group-item-action bg-dark text-white" onclick="addEmployeeInfo()">
@@ -127,9 +109,9 @@
                     </a>
 
 
-                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white" onclick="viewEmployeeInformation()">
+                     <a href="#" class="list-group-item list-group-item-action bg-dark text-white" onclick="viewEmployeeInformation()">
                         <span class="menu-collapsed">View Staff</span>
-                    </a>
+                    </a> 
 
 
                 </div>
@@ -138,7 +120,7 @@
                 <a href="#submenu3" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                     <div class="d-flex w-100 justify-content-start align-items-center">
                         <span class="fa fa-bar-chart fa-fw mr-3"></span>
-                        <span class="menu-collapsed">Projetcs</span>
+                        <span class="menu-collapsed">Projects</span>
                         <span class="submenu-icon ml-auto"></span>
                     </div>
                 </a>
@@ -186,7 +168,27 @@
                     </a>
                 </div>
                 <!---->
+                <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <i class="fa fa-users fa-fw mr-3" aria-hidden="true"></i>
+                        <span class="menu-collapsed">Staff List</span>
+                        <span class="submenu-icon ml-auto"></span>
+                    </div>
+                </a>
+                <!-- Submenu content -->
+                <div id='submenu1' class="collapse sidebar-submenu">
 
+                    <?php
+
+                    while ($data = mysqli_fetch_array($records)) {
+                        echo ("                      
+                               <a href= '#' class= 'list-group-item list-group-item-action bg-dark text-white'>
+                               <span class= 'menu-collapsed' > " . $data['firstName'] . " " . $data['lastName'] . "  </span>
+                               </a>");
+                    }
+                    ?>
+
+                </div>
                 <!-- Separator with title -->
                 <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
                     <small>OPTIONS</small>
@@ -214,14 +216,28 @@
         <!-- MAIN -->
         <div class="conn">
 
-            <div id="home"> <?php include 'aloginwel.php'; ?> </div>
-            <div id="addEmployee"><?php include 'addemp.php'; ?> </div>
-            <div id="viewEmployee"><?php include 'viewemp.php'; ?> </div>
-            <div id="addProject"><?php include 'assign.php'; ?> </div>
-            <div id="viewProject"><?php include 'assignproject.php'; ?> </div>
-            <div id="checkLeave"><?php include 'empleave.php'; ?></div>
-            <div id="checkSal"><?php include 'salaryemp.php'; ?></div>
-            <div id="calander"><?php include 'calander.php'; ?></div>
+                     <div class="d-flex justify-content-end ">
+                      <div id="home"> <?php include 'aloginwel.php'; ?> </div> 
+                      <div id="addProject"><?php include 'assign.php'; ?> </div>                  
+                      <div id="calander"><?php include 'calander.php'; ?></div>
+                       <div id="addEmployee"><?php include 'addemp.php'; ?> </div>
+                     </div>
+
+                     <div class="d-flex justify-content-center ">
+                      <div id="checkLeave"><?php include 'empleave.php'; ?></div>
+                       <div id="viewEmployee"><?php include 'viewemp.php'; ?> </div>
+                        
+                     </div>
+                   
+                     <div class="d-flex justify-content-center">
+                    <div id="viewProject"><?php include 'assignproject.php'; ?> </div>
+                     
+                     </div>
+                      <div id="checkSal"><?php include 'salaryemp.php'; ?></div>
+                    
+                    
+                      
+                   
 
 
             <script type="text/javascript">
@@ -375,19 +391,8 @@
             </script>
 
         </div>
-/
- <center>
-<ul class="list-group list-group-horizontal" style="display: inline-flex;">
-    <li class="list-group-item"><i class="fas fa-user-plus"></i> Add Employees</li>
-    <li class="list-group-item"><i class="fas fa-info"></i> Manage Employee Details</li>
-    <li class="list-group-item"><i class="fas fa-briefcase"></i> Assign Tasks to Employees</li>
-    <li class="list-group-item"><i class="fas fa-calendar-check"></i> Monitor Tasks Activity</li>
-    <li class="list-group-item"><i class="fas fa-calendar-plus"></i> Monitor Leave Application</li>
-    <li class="list-group-item"> <i class="fas fa-wallet"></i> View Salaries</li>
-    <li class="list-group-item"><i class="fas fa-calendar-alt"></i> Calender Events</li>
 
-</ul>
-</center>
+
 
 
 </div>
@@ -411,6 +416,6 @@
 // check if user is loged in
 if (!isset($_SESSION['userId'])) {
 
-    echo "<script>location.href='../../../../index.php'</script>";
+    echo "<script>location.href='../../../alogin.php'</script>"; 
 }
 ?>

@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 16, 2021 at 08:38 PM
--- Server version: 10.1.28-MariaDB
--- PHP Version: 7.1.10
+-- Generation Time: Jun 23, 2021 at 04:10 AM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 7.3.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -41,9 +40,7 @@ CREATE TABLE `ci_sessions` (
 --
 
 INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('4415ff22a93a262d17561220079e20f4', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0', '1623792048', 'a:3:{s:9:\"user_data\";s:0:\"\";s:8:\"LoggedIn\";b:1;s:5:\"email\";s:20:\"codebrewers@code.com\";}'),
-('47fada66bea47ce9acb6fd4f337c28db', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0', '1623787582', ''),
-('c617d7c544832b1079684af3e9ff5508', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0', '1623788862', '');
+('379cf95bcc91f8e387e27a9df7c36bab', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36', '1624410223', '');
 
 -- --------------------------------------------------------
 
@@ -75,7 +72,16 @@ INSERT INTO `clienti` (`id`, `nome`, `cognome`, `telefono`, `indirizzo`, `citta`
 (5, 'Arnold', 'Setumo', '78453565', 'Box 213, Broadhurst', 'Gaborone', 'arnolds@gmail.com', '45454', 'NA', '2021-05-28', 'Truck Driver\nScania S Series\nServices every 5 months'),
 (6, 'Thero', 'Lerasa', '74365485', 'Box 213, Tonota', 'Francistown', 'therol@gmail.com', '45454', 'NA', '2021-05-28', 'Scania P-series trucks\nOwner of Theruru Logistics'),
 (7, 'Molele', 'Moremi', '74543687', 'Box 321, Maun', 'Tlokweng', 'molele909@gmail.com', '45454', 'NA', '2021-05-28', 'Prefers to be serviced by Mr Mokgweetsi.'),
-(8, 'Thabo', 'Moshe', '75998834', 'Box 323 Modipane', 'Gaborone', 'thabo@gmail.com', '2254', '24455', '2021-05-28', 'Owns a golf GTI.\nService 3 months.');
+(8, 'Thabo', 'Moshe', '75998834', 'Box 323 Modipane', 'Gaborone', 'thabo@gmail.com', '2254', '24455', '2021-05-28', 'Owns a golf GTI.\nService 3 months.'),
+(9, 'Boineelo', 'Leadika', '72283242', 'Box 3223', 'Serowe ', 'bbak@gmail.com', '0.12', '12253364', '2021-06-22', 'Prefeers to come for Car service, the car model is Hyundai.'),
+(10, 'Maanleo', 'Imisa', '75364497', 'P O Box 231', 'Masunga ', 'maaneloimisa@gmail.com', '0.12', '2536442', '2021-06-22', 'Has a construction company.\nOwns 4 JCB trucks.\nHas 4 Tow Trucks.\n'),
+(11, 'Tshoganetso', 'Leledisa', '78982365', 'P O Box 111', 'Palapye', 'tshoganetso@gmail.com', '0.12', '69658500', '2021-06-22', 'Has a 4 hectare land in Sefhare.\nOwns 2 tractors that has wheel problems.'),
+(12, 'Bisho ', 'Feeling', '78985563', 'Box 232 ', 'Mogoditshane', 'bfeeling@gmail.com', '0.12', '755686324', '2021-06-22', 'Works at a Beams manufacturing company as the company director.'),
+(13, 'Aamon', 'Mepisime', '76113166', 'P O Box 12342', 'Mogoditshane', 'aamon@gmail.com', '0.12', '665565220', '2021-06-23', ''),
+(14, 'Abigail', 'Remain', '78665235', 'P O Box 456', 'Tlokweng ', 'abiremain@gmail.com', '0.12', '463330112', '2021-06-23', ''),
+(15, 'Zeas', 'Zeas', '75656236', 'P O Box ', 'Tloweng', 'zeazz@gmail.com', '0.12', '336461326', '2021-06-23', ''),
+(16, 'Xerawa', 'Mosinyi', '75633696', 'Box 212', 'Maun ', 'xmosinyi@gmail.com', '0.12', '79622233333', '2021-06-23', ''),
+(17, 'Xerawa', 'Mosinyi', '75633696', 'Box 212', 'Maun ', 'xmosinyi@gmail.com', '0.12', '79622233333', '2021-06-23', '');
 
 -- --------------------------------------------------------
 
@@ -129,7 +135,7 @@ CREATE TABLE `impostazioni` (
 --
 
 INSERT INTO `impostazioni` (`id`, `titolo`, `lingua`, `showcredit`, `disclaimer`, `skebby_user`, `skebby_pass`, `skebby_name`, `skebby_method`, `admin_user`, `admin_password`, `valuta`, `indirizzo`, `invoice_mail`, `telefono`, `vat`, `invoice_type`, `tax`, `invoice_name`, `categorie`, `twilio_mode`, `twilio_account_sid`, `twilio_auth_token`, `twilio_number`, `prefix_number`, `usesms`, `r_apertura`, `r_chiusura`, `colore1`, `colore2`, `colore3`, `colore4`, `colore5`, `colore_prim`, `logo`, `campi_personalizzati`, `stampadue`, `otp`) VALUES
-(1, 'Premier Automotive', 'english', 0, 'Disclaimer: Prices may vary according to a number of factors, i.e. TAX changes.', '', '', '', '', 'codebrewers@code.com', 'code', 'BWP', 'Your complete adGaborone, Botswana Mokol', 'kingsley@it.bw', '(267)77683784', '##00000000000', 'EU', '2', 'Koketso Morapedi', 'Car Service\r\nWelding\r\nTrucks\r\nnull', 'prod', '', '', '', 267, 2, 'Hello %customer%, your order/repair for %model% was opened by %businessname%. Check the state of repair on %fixbookurl%.\nStatus code: (%statuscode%)', 'Hello %customer%, your order/repair fo %model% has been completed, come to %businessname% for take it. Thanks for choosing us.', '#b5c43d', '#f27705', '#a8a8a8', '#1ad66b', '#e20000', '#2a2d34', 'logo_nav.png?13', 'YToxOntpOjA7czo0OiJudWxsIjt9', 1, '2174');
+(1, 'Premier Automotive And General Engineering', 'english', 0, 'Disclaimer: Prices may vary according to a number of factors, i.e. TAX changes.', '', '', '', '', 'codebrewers@code.com', 'code', 'BWP', 'Your complete Gaborone, Botswana Mokolo', 'kingsley@it.bw', '(267)77683784', '36542', 'EU', '12', 'Koketso Morapedi', 'Car Service\r\nWelding\r\nTrucks\r\nnull\r\nHeavy Machiney\r\nFitting\r\nConstruction\r\nOil Change\r\nTire Rotation\r\nAlignment\r\nSuspension Service\r\nBattery Replacement', 'prod', '', '', '', 267, 2, 'Hello %customer%, your order/repair for %model% was opened by %businessname%. Check the state of repair on %fixbookurl%.\nStatus code: (%statuscode%)', 'Hello %customer%, your order/repair fo %model% has been completed, come to %businessname% for take it. Thanks for choosing us.', '#b5c43d', '#f27705', '#a8a8a8', '#1ad66b', '#e20000', '#2a2d34', 'logo_nav.png?11', 'YToxOntpOjA7czo0OiJudWxsIjt9', 1, '5944');
 
 -- --------------------------------------------------------
 
@@ -142,7 +148,7 @@ CREATE TABLE `oggetti` (
   `Nominativo` varchar(255) NOT NULL,
   `ID_Nominativo` int(11) NOT NULL,
   `Telefono` varchar(255) NOT NULL,
-  `sms` int(1) NOT NULL DEFAULT '0',
+  `sms` int(1) NOT NULL DEFAULT 0,
   `Tipo` int(1) NOT NULL,
   `Guasto` text NOT NULL,
   `Categoria` varchar(255) NOT NULL,
@@ -152,7 +158,7 @@ CREATE TABLE `oggetti` (
   `Prezzo` int(255) NOT NULL,
   `dataApertura` datetime NOT NULL,
   `dataChiusura` datetime DEFAULT NULL,
-  `status` int(1) NOT NULL DEFAULT '3',
+  `status` int(1) NOT NULL DEFAULT 3,
   `Commenti` varchar(500) NOT NULL,
   `codice` varchar(20) NOT NULL,
   `custom_field` longtext NOT NULL
@@ -166,7 +172,9 @@ INSERT INTO `oggetti` (`ID`, `Nominativo`, `ID_Nominativo`, `Telefono`, `sms`, `
 (6, 'Arnold Setumo', 5, '78453565', 0, 1, 'Scania Truck', 'Trucks', 'S Series', 'Shocks repair', 1200, 7000, '2021-05-28 13:29:30', '2021-05-28 13:29:49', 0, 'Order is reserved for First week of June.', 'Arnold2021', '{\"6e756c6c\":\"\"}'),
 (7, 'Thabang Saakane', 4, '75986648', 0, 2, '', 'Welding', 'Mini Tuckshop', '', 900, 6500, '2021-05-28 13:43:30', NULL, 0, 'Designed a new 1099cm X 600cm.\nIncluded fittings and painted the whole block.', 'Thabang2021', '{\"6e756c6c\":\"\"}'),
 (8, 'Thabo Moshe', 8, '75998834', 0, 1, 'Engine Service', 'Car Service', 'Golf 7', 'No', 200, 6000, '2021-05-28 15:17:21', NULL, 0, 'Needs immediate service.', 'Thabo2021', '{\"6e756c6c\":\"\"}'),
-(9, 'Thero Lerasa', 6, '74365485', 0, 2, 'Engine servicing', 'Car Service', 'Toyota Hilux', '', 500, 1200, '2021-06-04 15:15:16', NULL, 0, 'Prefers a drop servicing.\nModel 2019\n', 'hilux2019', '{\"6e756c6c\":\"\"}');
+(10, 'Arnold Setumo', 5, '78453565', 0, 2, 'Service', 'Car Service', 'Mazda 3', '', 800, 1800, '2021-06-22 17:19:47', NULL, 0, 'Comes 3 every months', '', '{\"6e756c6c\":\"\"}'),
+(11, 'Molele Moremi', 7, '74543687', 0, 1, 'Truck Spring', 'Trucks', 'JCB', '900', 100, 800, '2021-06-22 17:22:10', '2021-06-22 17:33:19', 0, '', '', '{\"6e756c6c\":\"\"}'),
+(13, 'Xerawa Mosinyi', 16, '75633696', 0, 1, 'Spring Loose', 'Trucks', 'Scania', 'Spring', 400, 800, '2021-06-23 02:57:05', NULL, 2, '', 'X2021', '{\"6e756c6c\":\"\"}');
 
 --
 -- Indexes for dumped tables
@@ -204,7 +212,7 @@ ALTER TABLE `oggetti`
 -- AUTO_INCREMENT for table `clienti`
 --
 ALTER TABLE `clienti`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `impostazioni`
@@ -216,7 +224,7 @@ ALTER TABLE `impostazioni`
 -- AUTO_INCREMENT for table `oggetti`
 --
 ALTER TABLE `oggetti`
-  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

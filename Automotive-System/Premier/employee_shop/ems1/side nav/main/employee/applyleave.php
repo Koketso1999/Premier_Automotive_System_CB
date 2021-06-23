@@ -10,13 +10,6 @@
                    
                     <form action="..//process/applyleaveprocess.php?id=<?php echo $id?>" method="POST">
 
-                        <?php
-
-                           
-                           echo("<h3>Available Days $availableDay</h3>");
-                                  
-                            
-                         ?>
                          
                         <div class="input-group">
                             <input class="input--style-1" type="text" placeholder="Reason" name="reason">

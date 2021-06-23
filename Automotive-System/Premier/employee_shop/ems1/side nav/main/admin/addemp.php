@@ -5,7 +5,7 @@
  
 </head>
 <body>
-    <div class="contentDisplay">
+<div class="contentDisplay">
 
 <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
         <div class="wrapper wrapper--w680">
@@ -20,7 +20,7 @@
 
                 <br><br>
 
-                <form action="..//process/addempprocess.php" method="POST" enctype="multipart/form-data">
+                <form action="../process/addempprocess.php" method="POST" >
 
                     <div class="row row-space">
                         <div class="col-2">
@@ -40,11 +40,10 @@
                     </div>
                     <p>Birthday</p>
                     <div class="row row-space">
-                        <div class="col-2">
                             <div class="input-group">
-                                <input class="input--style-1" type="text" name="birthday" required="required">
+                                <input class="input--style-1" type="date" name="birthday" required="required" placeholder="Date of birth">
 
-                            </div>
+                            
                         </div>
 
 
@@ -95,7 +94,7 @@
                         </div>
 
                         <center>
-                            <button type="button" class="btn btn-secondary btn-lg" type="submit">Submit</button>
+                            <button class="btn btn-secondary btn-lg" type="submit">Submit</button>
                         </center>
                 </form>
             </div>

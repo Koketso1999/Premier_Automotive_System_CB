@@ -19,12 +19,11 @@
     <link href="..//vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
 
     <!-- Main CSS-->
-    <link href="..//css/main.css" rel="stylesheet" media="all">
+    <link href="..//css/main.css" rel="stylesheet" media="all"> 
 <!-- add emp css END -->
 
 
 <!-- view emp css START -->
- <!-- <link rel="stylesheet" type="text/css" href="..//css/styleviewEmp.css">  -->
 <!-- view emp END -->
 
 <!-- add project css START -->

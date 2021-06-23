@@ -54,7 +54,7 @@ jQuery(document).ready(function() {
             <div class="global-page-container">
 
                 <div class="logo small-6 small-offset-3 large-3 large-offset-0 columns no-padding">
-                    <a href="..//..//../Automotive-System/Premier/employee_shop/index.html" title="home">
+                <a href="../../../Premier/employee_shop/index.php" title="home">
                         <div class="table">
                             <div class="table-cell">
                                 <h1> <span class="square">&nbsp;</span>Premier Automotive & General Engineering</h1>

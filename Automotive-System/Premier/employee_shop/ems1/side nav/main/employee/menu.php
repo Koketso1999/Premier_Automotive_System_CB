@@ -47,6 +47,7 @@
 
             $timeDiff = time() - $_SESSION["login_time"];
             echo "<script>alert ('you were loged in for $timeDiff seconds');</script>";
+            echo "<script>location.href='../../../elogin.php'</script>"; 
 			
         }
     ?>
@@ -148,30 +149,7 @@
                 <small>OPTIONS</small>
             </li>
             <!-- /END Separator -->
-            <a href="#" class="bg-dark list-group-item list-group-item-action" onclick="displayCalender()">
-                <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-calendar fa-fw mr-3"></span>
-                    <span class="menu-collapsed" >Calendar</span>
-                </div>
-            </a>
-
-            <!-- import variables from message -->
-            <div id="messageCount"><?php include 'list_pm.php';?></div>
-            <script type="text/javascript">
-            var messageCount = document.getElementById("messageCount");
-            messageCount.style.display = "none";
-            </script>
-
-
-            <!-- Separator without title -->
-            <li class="list-group-item sidebar-separator menu-collapsed"></li>
-            <!-- /END Separator -->
-            <a href="#" class="bg-dark list-group-item list-group-item-action" onclick="displayContactInfo()">
-                <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-phone fa-fw mr-3"></span>
-                    <span class="menu-collapsed" >Contact</span>
-                </div>
-            </a>
+           
             <a href="#top" data-toggle="sidebar-colapse" class="bg-dark list-group-item list-group-item-action d-flex align-items-center">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span id="collapse-icon" class="fa fa-2x mr-3"></span>
@@ -188,7 +166,12 @@
         <div id="homePage">  </div>
         <div id="project"> <?php include 'empproject.php'; ?> </div>
         <div id="leave">  <?php include 'applyleave.php';?> </div>
-        <div id="leaveStatus"><?php include 'leavestatus.php';?></div>
+        <div class="d-flex justify-content-end">
+         <div id="leaveStatus" style="width: 80%; margin-top:80px;" ><?php include 'leavestatus.php';?></div>
+        </div>
+       
+        
+      
         <div id="about"><?php include 'myprofile.php'; ?></div>
         <div id="changePass"><?php include 'changepassemp.php'; ?></div>
         <div id="contact"> Contact Us information here</div>
@@ -367,6 +350,6 @@
  if(!isset($_SESSION['userId']))
  {
     
-    // echo "<script>location.href='../../../elogin.php'</script>"; 
-    	}
+     echo "<script>location.href='../../../elogin.php'</script>"; 
+    }
 ?>
